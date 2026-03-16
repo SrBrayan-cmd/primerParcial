@@ -72,9 +72,44 @@ function calcularRiesgo() {
     nivelRiesgo.className = `nivel ${claseNivel}`;
     nivelRiesgo.textContent = `Nivel: ${nivel}`;
 
+    recomendaciones.innerHTML = '';
 
+    const rec1 = document.createElement('li');
+    const rec2 = document.createElement('li');
+    const rec3 = document.createElement('li');
+
+    if (nivel === 'BAJO') {
+        rec1.textContent = ' Mantén una dieta balanceada';
+        rec2.textContent = ' Ejercicio 3 veces por semana';
+        rec3.textContent = ' Chequeo anual';
+    } else if (nivel === 'MODERADO') {
+        rec1.textContent = ' Reduce el consumo de sal';
+        rec2.textContent = ' Camina 30 minutos diarios';
+        rec3.textContent = ' Consulta a tu médico en 3 meses';
+    } else {
+        rec1.textContent = ' Busca atención médica URGENTE';
+        rec2.textContent = ' Toma la medicación recetada';
+        rec3.textContent = ' Control semanal de presión';
+    }
+        recomendaciones.append(rec1, rec2, rec3);
+        resultado.style.display = 'block';
+    }
+
+    function limpiarFormulario() {
+
+        document.getElementById('edad').value = '';
+        document.getElementById('presion').value = '';
+        document.getElementById('colesterol').value = '';
+        document.getElementById('fumador').value = '';
+        
+        textoResultado.textContent = '';
+        nivelRiesgo.textContent = '';
+        nivelRiesgo.className = 'nivel';
+        recomendaciones.innerHTML = '';
+        resultado.style.backgroundColor = '#F5F5F5';
+        resultado.style.display = 'none';
+        
 }
 
 btnCalcular.addEventListener('click', calcularRiesgo);
 btnLimpiar.addEventListener('click', limpiarFormulario);
-resultado.style.display = 'none';
