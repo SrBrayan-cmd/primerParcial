@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Riesgo Cardiovascular</title>
+</head>
+<body>
+
+  <div class="contenedor" id="app">
+    <h1>❤️ Calculadora de Riesgo Cardiovascular</h1>
+    <p class="subtitulo">Ingresa tus datos para conocer tu nivel de riesgo</p>
+
+    <div class="formulario">
+
+      <div class="campo">
+        <label for="edad">Edad (años):</label>
+        <input type="number" id="edad" placeholder="Ej: 35" min="1" max="120">
+      </div>
+
+      <div class="campo">
+        <label for="presion">Presión sistólica (mmHg):</label>
+        <input type="number" id="presion" placeholder="Ej: 120" min="60" max="250">
+      </div>
+
+      <div class="campo">
+        <label for="colesterol">Colesterol total (mg/dL):</label>
+        <input type="number" id="colesterol" placeholder="Ej: 180" min="100" max="400">
+      </div>
+
+      <div class="campo">
+        <label for="fumador">¿Fumas?</label>
+        <select id="fumador">
+          <option value="">-- Selecciona --</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <button id="btnCalcular">Calcular Riesgo</button>
+      <button id="btnLimpiar">Limpiar</button>
+
+    </div>
+
+    <div class="resultado" id="resultado">
+      <h2>Resultado</h2>
+      <p id="textoResultado"></p>
+      <div id="nivelRiesgo" class="nivel"></div>
+      <ul id="recomendaciones"></ul>
+    </div>
+
+  </div>
+</body>
+</html>
