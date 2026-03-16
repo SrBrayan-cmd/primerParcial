@@ -26,12 +26,12 @@ body {
     padding: 20px;
 }
 
-/* Contenedor principal */
+/* Contenedores */
 .contenedor {
     max-width: 600px;
     width: 100%;
     background: var(--superficie);
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     box-shadow: 0 16px 32px rgba(0,0,0,0.08), 0 16px 48px rgba(0,0,0,0.12);
     padding: 32px;
 }
@@ -71,17 +71,17 @@ h1 {
 }
 
 .campo label {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     color: var(--primario);
     text-transform: uppercase;
-    letter-spacing: 0.025rem;
+    letter-spacing: 0.063rem;
 }
 
 .campo input, .campo select {
     padding: 16px 12px;
     border: 2px solid rgba(0, 0, 0, 0.12);
-    border-radius: 8px;
+    border-radius: 4px;
     font-size: 16px;
     transition: all 0.3s;
     background: var(--background);
@@ -97,7 +97,7 @@ h1 {
 button {
     padding: 16px 24px;
     border: none;
-    border-radius: 28px;
+    border-radius: 4px;
     font-size: 0.875rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -137,8 +137,9 @@ button {
     margin-top: 32px;
     padding: 24px;
     background: #F5F5F5;
-    border-radius: 16px;
+    border-radius: 0.7rem;
     transition: all 0.3s;
+    display: none;
 }
 
 .resultado h2 {
